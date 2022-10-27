@@ -367,7 +367,7 @@ labelBalance.addEventListener('click', function () {
 });
 
 // Nth
-*/
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Numeric Separators
@@ -387,3 +387,38 @@ console.log(PI);
 
 console.log(Number('230_000'));
 console.log(parseInt('230_000'));
+*/
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Working with BigInt
+
+console.log(2 ** 53 - 1);
+console.log(Number.MAX_SAFE_INTEGER); // largest #
+console.log(2 ** 53 + 1);
+console.log(2 ** 53 + 2);
+console.log(2 ** 53 + 3);
+console.log(2 ** 53 + 4);
+
+console.log(73828239872237387238923723782398837823823872389273728382379238n);
+console.log(BigInt(82398722373));
+
+// Operations
+console.log(10000n + 10000n);
+console.log(6128827187291279817837899379398282n * 100000000000n);
+// console.log(Math.sqrt(16n));
+
+const huge = 203904383783387282n;
+const num = 23;
+console.log(huge * BigInt(num));
+
+// Exceptions
+console.log(20n > 15);
+console.log(20n === 20);
+console.log(typeof 20n);
+console.log(20n == '20');
+
+console.log(huge + ' is REALLY big!!!');
+
+// Divisions
+console.log(11n / 3n);
+console.log(10 / 3);
